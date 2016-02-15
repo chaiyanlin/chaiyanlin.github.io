@@ -3,6 +3,7 @@ var gulp        = require('gulp'),
 
 //Cmds:
 var gitMaster           = 'git checkout master',
+	gitSource           = 'git checkout source',
 	gitMergeSource      = 'git merge source',
 	hexoClean           = 'hexo clean',
 	hexoDeploy          = 'hexo deploy -g', //生成加部署
