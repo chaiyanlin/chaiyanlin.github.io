@@ -3,9 +3,9 @@ var gulp        = require('gulp'),
 
 //Cmds:
 var gitMaster           = 'git checkout master',
-	gitMergeSource      = 'git merde source',
+	gitMergeSource      = 'git merge source',
 	hexoClean           = 'hexo clean',
 	hexoDeploy          = 'hexo deploy -g', //生成加部署
 	gitSyncRemoteMaster = 'git pull origin master && git push origin master';
 
-gulp.task('publish', shell.task([gitMaster, gitMergeSource, hexoClean, hexoDeploy, gitSyncRemoteMaster]));
+gulp.task('default', shell.task([gitMaster, gitMergeSource, hexoClean, hexoDeploy, gitSyncRemoteMaster]));
