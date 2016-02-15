@@ -8,4 +8,4 @@ var gitMaster           = 'git checkout master',
 	hexoDeploy          = 'hexo deploy -g', //生成加部署
 	gitSyncRemoteMaster = 'git pull origin master && git push origin master';
 
-gulp.task('publish', shell([gitMaster, gitMergeSource, hexoClean, hexoDeploy, gitSyncRemoteMaster]));
+gulp.task('publish', shell.task([gitMaster, gitMergeSource, hexoClean, hexoDeploy, gitSyncRemoteMaster]));
