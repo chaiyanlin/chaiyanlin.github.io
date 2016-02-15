@@ -67,10 +67,9 @@ $magnet = $item->find('div[class=item-detail]', 0)->find('span', 0)->innertext()
 怎么样？是不是满满的jquery即视感！？有了simple_html_dom，使用PHP遍历查找dom元素的问题就迎刃而解了~
 
 
-**
-遇到的一个小问题
+
+**遇到的一个小问题**
 --------
-**
 
 在刚开始通过上面那段代码查找磁力链接的时候，返回了如下片段：
 ```
