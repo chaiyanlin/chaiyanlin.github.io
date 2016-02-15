@@ -3,21 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>test | Yanlin Chai</title>
+    <title>Git服务器上的项目迁移到其他服务器上的详细说明 | Yanlin Chai</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="git" />
     
-    <meta name="description" content="Yanlin Chai&apos;s Blog">
+    <meta name="description" content="有一个项目一直是再我们localhost服务器A下使用的git做的开发。最近需要搬移到线上的服务器B上。目的：要保留原有的所有的开发记录。一开始，我准备是直接clone一份最新的，然后以这个为原始版本开创建，发现这个是不可取的。最后想到的一个办法就是，登陆到A上面，切换到git用户组，使用scp将整个repositories下的项目目录copy到服务器B的git repositories下。那样就">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://yoursite.com/2016/02/15/test/index.html">
+<meta property="og:title" content="Git服务器上的项目迁移到其他服务器上的详细说明">
+<meta property="og:url" content="http://yoursite.com/2016/02/02/Git服务器上的项目迁移到其他服务器上的详细说明/index.html">
 <meta property="og:site_name" content="Yanlin Chai">
-<meta property="og:description" content="Yanlin Chai&apos;s Blog">
-<meta property="og:updated_time" content="2016-02-15T08:18:04.825Z">
+<meta property="og:description" content="有一个项目一直是再我们localhost服务器A下使用的git做的开发。最近需要搬移到线上的服务器B上。目的：要保留原有的所有的开发记录。一开始，我准备是直接clone一份最新的，然后以这个为原始版本开创建，发现这个是不可取的。最后想到的一个办法就是，登陆到A上面，切换到git用户组，使用scp将整个repositories下的项目目录copy到服务器B的git repositories下。那样就">
+<meta property="og:image" content="http://image.slidesharecdn.com/gitworkshop-nuzhdinlab-june-2014-140601193331-phpapp01/95/git-introduction-workshop-for-scientists-1-638.jpg?cb=1402457817">
+<meta property="og:updated_time" content="2016-02-15T09:03:08.890Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="Yanlin Chai&apos;s Blog">
+<meta name="twitter:title" content="Git服务器上的项目迁移到其他服务器上的详细说明">
+<meta name="twitter:description" content="有一个项目一直是再我们localhost服务器A下使用的git做的开发。最近需要搬移到线上的服务器B上。目的：要保留原有的所有的开发记录。一开始，我准备是直接clone一份最新的，然后以这个为原始版本开创建，发现这个是不可取的。最后想到的一个办法就是，登陆到A上面，切换到git用户组，使用scp将整个repositories下的项目目录copy到服务器B的git repositories下。那样就">
     
 
     
@@ -101,34 +102,42 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-test" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Git服务器上的项目迁移到其他服务器上的详细说明" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        test
+        Git服务器上的项目迁移到其他服务器上的详细说明
         </h1>
     
 
             </header>
         
         <div class="article-subtitle">
-            <a href="/2016/02/15/test/" class="article-date">
-    <time datetime="2016-02-15T08:16:43.000Z" itemprop="datePublished">2016-02-15</time>
+            <a href="/2016/02/02/Git服务器上的项目迁移到其他服务器上的详细说明/" class="article-date">
+    <time datetime="2016-02-02T12:32:55.000Z" itemprop="datePublished">2016-02-02</time>
 </a>
             
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
         </div>
         <div class="article-entry" itemprop="articleBody">
-            
+            <p><img src="http://image.slidesharecdn.com/gitworkshop-nuzhdinlab-june-2014-140601193331-phpapp01/95/git-introduction-workshop-for-scientists-1-638.jpg?cb=1402457817" alt=""></p>
+<p>有一个项目一直是再我们localhost服务器A下使用的git做的开发。最近需要搬移到线上的服务器B上。<br>目的：要保留原有的所有的开发记录。<br>一开始，我准备是直接clone一份最新的，然后以这个为原始版本开创建，发现这个是不可取的。<br>最后想到的一个办法就是，登陆到A上面，切换到git用户组，使用scp将整个repositories下的项目目录copy到服务器B的git repositories下。那样就能保留原有的文件所有者规git所有。然后在服务器B上创建一个跟刚才copy过去的项目。就可以直接在本地使用B服务器上的git地址进行开发了。<br>如果您是使用的别人的git仓库，比如github。那就看看下面这篇我在网上找的文章：<br>如果你想从别的 Git 托管服务那里复制一份源代码到新的 Git 托管服务器上的话，可以通过以下步骤来操作。<br>1). 从原地址克隆一份裸版本库，比如原本托管于 GitCafe。<br>        <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">–bare</span> git@gitcafe.com:username/project.git</span><br></pre></td></tr></table></figure></p>
+<p>2). 然后到新的 Git 服务器上创建一个新项目，比如 GitHub。<br>3). 以镜像推送的方式上传代码到 GitHub 服务器上。<br>        <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd project<span class="class">.git</span></span><br><span class="line">git push –mirror git@github<span class="class">.com</span>:username/newproject.git</span><br></pre></td></tr></table></figure></p>
+<p>4). 删除本地代码<br>        <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf <span class="keyword">project</span>.git</span><br></pre></td></tr></table></figure></p>
+<p>5). 到新服务器 GitCafe 上找到 Clone 地址，直接 Clone 到本地就可以了。<br>        <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@github.com:username/newproject.git</span><br></pre></td></tr></table></figure></p>
+<p>这种方式可以保留原版本库中的所有内容。</p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2016/02/15/test/" data-id="ciknqoj1i0001h8wcmaggs5iv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2016/02/02/Git服务器上的项目迁移到其他服务器上的详细说明/" data-id="ciknr6v6400006kwcccnk5vcw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -264,12 +273,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2016/02/02/Windows下解决sublime编辑器git插件乱码问题/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            Windows下解决sublime编辑器git插件乱码问题
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
     
-        <a href="/2016/02/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Hello World LOL</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
     
 </nav>
 
@@ -286,10 +299,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/02/15/test/" class="thumbnail">
+                            <a href="/2016/02/14/PHP爬虫抓取搜索引擎返回结果/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://r.photo.store.qq.com/psb?/V11nXmZd1imMs1/y9AXD.y7Wk8X6SGLqi3dxKSm4QP.TCv5VAWbcrIG6l8!/r/dHMAAAAAAAAA)" alt="PHP爬虫抓取搜索引擎返回结果" class="thumbnail-image"></span>
     
     
 </a>
@@ -297,15 +310,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/02/15/test/" class="title">test</a></p>
-                            <p class="item-date"><time datetime="2016-02-15T08:16:43.000Z" itemprop="datePublished">2016-02-15</time></p>
+                            <p class="item-title"><a href="/2016/02/14/PHP爬虫抓取搜索引擎返回结果/" class="title">PHP爬虫抓取搜索引擎返回结果</a></p>
+                            <p class="item-date"><time datetime="2016-02-14T15:09:17.000Z" itemprop="datePublished">2016-02-14</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/02/15/hello-world/" class="thumbnail">
+                            <a href="/2016/02/02/Windows下解决sublime编辑器git插件乱码问题/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -316,8 +329,27 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/02/15/hello-world/" class="title">Hello World LOL</a></p>
-                            <p class="item-date"><time datetime="2016-02-15T08:05:57.652Z" itemprop="datePublished">2016-02-15</time></p>
+                            <p class="item-title"><a href="/2016/02/02/Windows下解决sublime编辑器git插件乱码问题/" class="title">Windows下解决sublime编辑器git插件乱码问题</a></p>
+                            <p class="item-date"><time datetime="2016-02-02T14:14:10.000Z" itemprop="datePublished">2016-02-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/02/02/Git服务器上的项目迁移到其他服务器上的详细说明/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://image.slidesharecdn.com/gitworkshop-nuzhdinlab-june-2014-140601193331-phpapp01/95/git-introduction-workshop-for-scientists-1-638.jpg?cb=1402457817)" alt="Git服务器上的项目迁移到其他服务器上的详细说明" class="thumbnail-image"></span>
+    
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/02/02/Git服务器上的项目迁移到其他服务器上的详细说明/" class="title">Git服务器上的项目迁移到其他服务器上的详细说明</a></p>
+                            <p class="item-date"><time datetime="2016-02-02T12:32:55.000Z" itemprop="datePublished">2016-02-02</time></p>
                         </div>
                     </li>
                 
@@ -333,16 +365,30 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">tools</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
 
             
                 
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a>
+        </div>
+    </div>
+
 
             
                 
@@ -387,7 +433,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2016/02/15/test/';
+    var disqus_url = 'http://yoursite.com/2016/02/02/Git服务器上的项目迁移到其他服务器上的详细说明/';
     
     (function() {
     var dsq = document.createElement('script');
